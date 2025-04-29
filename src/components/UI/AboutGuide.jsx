@@ -16,7 +16,7 @@ export const AboutGuide = () => {
       {/* child */}
       <div className="flex flex-col px-[2rem] py-[2rem] lg:flex-row w-full items-center justify-center lg:py-[3rem] lg:justify-center lg:items-center lg:gap-[3rem] lg:px-[4rem]" >
         {/* Image */}
-        <div>
+        <div className=" lg:w-[50%]">
           <img
             src="/assets/features-bg.jpg"
             alt="Features"
@@ -26,7 +26,7 @@ export const AboutGuide = () => {
 
         {/* content */}
 
-        <div className="flex text-wrap py-[2rem] lg:py-0 flex-col gap-[3rem] w-full lg:h-[60vh]">
+        <div className="flex text-wrap py-[2rem] lg:py-0 flex-col gap-[3rem] lg:w-[50%] ">
           <div className="flex items-start gap-[1rem]" data-aos="zoom-in-up" data-aos-duration="1000">
             <BsArchive className="w-[3rem] h-[3rem] text-yellow-400" />
             <div>

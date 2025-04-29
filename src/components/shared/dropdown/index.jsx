@@ -26,7 +26,7 @@ const Dropdown = ({ openDropdown, setOpenDropDown,handleDropdown }) => {
       <div>
         <button
           type="button"
-          class="inline-flex cursor-pointer w-full justify-center hover:text-yellow-400 text-white transition duration-300 ease-in-out"
+          class="inline-flex cursor-pointer w-full justify-center text-black lg:text-white transition duration-300 ease-in-out"
           id="menu-button"
           aria-expanded="true"
           aria-haspopup="true"
@@ -53,13 +53,13 @@ const Dropdown = ({ openDropdown, setOpenDropDown,handleDropdown }) => {
       {openDropdown && (
         <div
         ref={dropdownRef}
-          class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+          class="absolute left-0 z-10 mt-2 w-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
           tabindex="-1"
         >
-          <div class="py-1" role="none">
+          <div class="py-1 lg:px-0" role="none">
             <ul class="text-gray-700" role="none">
               <li
                 class="block px-4 py-2 text-sm text-gray-700 hover:bg-yellow-400 cursor-pointer transition duration-300 ease-in-out"

@@ -35,7 +35,7 @@ export const ServicesCards = () => {
             className="hover:-translate-y-1 transition-transform duration-[400ms] transform hover:scale-105 shadow-md flex flex-col flex-wrap text-center items-center justify-center gap-[2rem] px-[3rem] py-[4rem] "
           >
             {/* icon */}
-            <div className="bg-yellow-400 w-[4rem] h-[4rem] text-[1.8rem] flex justify-center items-center">
+            <div className="bg-yellow-400 rounded-[5px] w-[4rem] h-[4rem] text-[1.8rem] flex justify-center items-center">
               {servicesIcon[icon]}
             </div>
             <div>

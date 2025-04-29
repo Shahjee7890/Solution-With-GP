@@ -16,7 +16,8 @@ export const PortfolioS2 = () => {
   useEffect(() => {
     Aos.init({});
   }, []);
-  const detailParent = "flex flex-row items-start gap-[15px] py-[1rem] lg:py-[2.5rem]";
+  const detailParent =
+    "flex flex-row items-start gap-[15px] py-[1rem] lg:py-[2.5rem]";
 
   const [counterOn, setCounterOn] = useState(false);
 
@@ -76,18 +77,18 @@ export const PortfolioS2 = () => {
               <div>
                 <BsEmojiSmile className="text-yellow-400 w-[3rem] h-[3rem]" />
               </div>
-              <div>
+              <div className="flex flex-col gap-2">
                 <h1 className="lg:text-[2rem] text-[25px] font-[600] font-roboto">
                   {counterOn && (
                     <CountUp start={0} end={232} duration={2} delay={0} />
                   )}
                 </h1>
-                <p className="text-[15px] lg:text-[13px] xl:text-[15px] font-[400] text-[#6c757d] flex items-center gap-[7px] font-raleway">
-                  <span className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
+                <div className="text-[15px] text-nowrap lg:text-[13px] xl:text-[15px] font-[400] text-[#6c757d] flex items-center justify-center gap-2 font-raleway">
+                  <p className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
                     Happy Clients
-                  </span>
-                  consequuntur quae
-                </p>
+                  </p>
+                  <p>consequuntur quae</p>
+                </div>
               </div>
             </div>
             {/* detail 2 */}
@@ -97,18 +98,20 @@ export const PortfolioS2 = () => {
                 <div>
                   <BsJournalRichtext className="text-yellow-400 w-[3rem] h-[3rem]" />
                 </div>
-                <div>
+                <div className="flex flex-col gap-4">
                   <h1 className="lg:text-[2rem] text-[25px] font-[600] font-roboto">
                     {counterOn && (
                       <CountUp start={0} end={521} duration={2} delay={0} />
                     )}
                   </h1>
-                  <p className="text-[15px] lg:text-[13px] xl:text-[15px] font-[400] text-[#6c757d] flex items-center gap-[7px] font-raleway">
-                    <span className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
+                  <div className="flex items-center text-nowrap justify-center gap-1 font-raleway">
+                    <p className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d] leading-0">
                       Projects
-                    </span>
-                    adipisci atque cum quia aut
-                  </p>
+                    </p>
+                    <p className="text-[15px] lg:text-[13px] xl:text-[15px] font-[400] text-[#6c757d] leading-0">
+                      adipisci atque cum quia aut
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -118,18 +121,18 @@ export const PortfolioS2 = () => {
               <div>
                 <BsHeadset className="text-yellow-400 w-[3rem] h-[3rem]" />
               </div>
-              <div>
+              <div className="flex flex-col gap-4">
                 <h1 className="lg:text-[2rem] text-[25px] font-[600] font-roboto">
                   {counterOn && (
                     <CountUp start={0} end={1453} duration={2} delay={0} />
                   )}
                 </h1>
-                <p className="text-[15px] lg:text-[12px] xl:text-[15px] font-[400] text-[#6c757d] flex items-center gap-[7px] font-raleway">
-                  <span className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
+                <div className=" flex items-center text-nowrap justify-center text-[15px] lg:text-[12px] xl:text-[15px] font-[400] text-[#6c757d] gap-[6px] font-raleway">
+                  <p className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
                     Hours Of Support
-                  </span>
-                  aut commodi quaerat
-                </p>
+                  </p>
+                  <p>aut commodi quaerat</p>
+                </div>
               </div>
             </div>
             {/* detail 4 */}
@@ -137,18 +140,18 @@ export const PortfolioS2 = () => {
               <div>
                 <BsPeople className="text-yellow-400 w-[3rem] h-[3rem]" />
               </div>
-              <div>
+              <div className="flex flex-col gap-4">
                 <h1 className="lg:text-[2rem] text-[25px] font-[600] font-roboto">
                   {counterOn && (
                     <CountUp start={0} end={232} duration={2} delay={0} />
                   )}
                 </h1>
-                <p className="text-[15px] lg:text-[13px] xl:text-[15px] font-[400] text-[#6c757d] flex items-center gap-[7px] font-raleway">
-                  <span className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
+                <div className="text-[15px] text-nowrap lg:text-[13px] xl:text-[15px] font-[400] text-[#6c757d] flex items-center justify-center gap-[6px] font-raleway">
+                  <p className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
                     Hard Workers
-                  </span>
-                  rerum asperiores dolor
-                </p>
+                  </p>
+                  <p>rerum asperiores dolor</p>
+                </div>
               </div>
             </div>
           </div>

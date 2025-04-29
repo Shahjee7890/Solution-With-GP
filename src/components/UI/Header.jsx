@@ -13,13 +13,10 @@ export const Header = () => {
   const pathname = location.pathname;
   console.log(pathname);
 
-
-
   // open dropdown on hover
   const handleDropdown = () => {
     setOpenDropDown(!openDropdown);
   };
-
 
   const btnColor = `transition duration-300 ease-in-out`;
   const activeLink = `bg-yellow-400 w-full px-10 py-2 rounded-[4px] text-black`;
@@ -86,11 +83,13 @@ export const Header = () => {
                 <NavLink to={"/team"}>Team</NavLink>
               </li>
               <li className={btnColor}>
-                <Dropdown openDropdown={openDropdown} 
-                setOpenDropDown={setOpenDropDown}
-                handleDropdown={handleDropdown}
+                <Dropdown
+                  openDropdown={openDropdown}
+                  setOpenDropDown={setOpenDropDown}
+                  handleDropdown={handleDropdown}
                 />
               </li>
+
               <li
                 onClick={() => setShowMen(false)}
                 className={`${btnColor}  ${

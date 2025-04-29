@@ -84,7 +84,7 @@ const Portfolio = () => {
           </button>
         </div>
         {/* images */}
-        <div
+        {/* <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[2rem] px-[1rem] lg:px-[3rem] py-[4rem] w-full"
           data-aos="zoom-in-up"
           data-aos-duration="1000"
@@ -97,7 +97,7 @@ const Portfolio = () => {
                 key={index}
                 className=" picture-container h-full relative w-full items-center text-center transition-all duration-300 ease-in-out hover:scale-[1.05] gap-[1rem]"
               >
-                {/* image */}
+            
 
                 <div className=" img h-full flex flex-col items-center justify-center relative group transform transition duration-1000 ease-in-out">
                   <div className="h-full">
@@ -105,12 +105,47 @@ const Portfolio = () => {
                   </div>
                   <div className="flex py-[1rem] flex-col bg-gray-50 duration-500 opacity-0 group-hover:opacity-100 gap-1 px-[10px] items-start absolute bottom-0 left-0 right-0 justify-center">
                     <div>
-                      {/* Tittle */}
                       <h3 className="text-[16px] font-[500] font-poppins">
                         {title}
                       </h3>
                     </div>
-                    {/* discription */}
+             
+                    <p className="text-[12px] text-gray-500 font-[500] font-raleway">
+                      {description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div> */}
+
+<div
+          className="gallery_section px-[1rem] lg:px-[3rem] py-[4rem] w-full"
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+        >
+          {filteredData.map((curData, index) => {
+            const { image, title, description } = curData;
+
+            return (
+              <div
+                key={index}
+                className="gallery_section_card h-full relative w-full items-center text-center transition-all duration-300 ease-in-out hover:scale-[1.05] gap-[1rem]"
+              >
+            
+
+                <div className=" img h-full flex flex-col items-center justify-center relative group transform transition duration-1000 ease-in-out">
+                  <div className="h-full">
+                    <img src={image} alt="Picture" className=" w-full h-full" />
+                  </div>
+                  <div className="flex py-[1rem] flex-col bg-gray-50 duration-500 opacity-0 group-hover:opacity-100 gap-1 px-[10px] items-start absolute bottom-0 left-0 right-0 justify-center">
+                    <div>
+                      <h3 className="text-[16px] font-[500] font-poppins">
+                        {title}
+                      </h3>
+                    </div>
+             
                     <p className="text-[12px] text-gray-500 font-[500] font-raleway">
                       {description}
                     </p>

@@ -68,7 +68,7 @@ const About = () => {
 
       {/* Guide */}
 
-      <div>
+      <div className="mx-auto w-full">
         <AboutGuide />
       </div>
     </section>

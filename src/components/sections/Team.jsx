@@ -29,22 +29,22 @@ import { useEffect } from "react";
           <p className="text-[36px] font-[700] font-roboto">OUR TEAM</p>
         </div>
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2rem] px-[1rem] lg:px-[3rem] py-[2rem] w-full" data-aos="zoom-in-up" data-aos-duration="1800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1.5rem] md:gap-[10px] px-[1rem] lg:px-[3rem] py-[2rem] w-full" data-aos="zoom-in-up" data-aos-duration="1800">
           {TeamCard.map((curData, index) => {
             const { image, name, title } = curData;
 
             return (
               <div
                 key={index}
-                className="flex flex-col flex-wrap text-center items-start justify-center gap-[1rem] px-[1rem] py-[1rem] "
+                className=" shadow-xl z-[500] flex flex-col flex-wrap text-center items-start justify-center gap-[1rem] "
               >
                 {/* icon */}
-                <div className="flex flex-col items-center justify-center relative group transform transition duration-1000 ease-in-out">
-                  <div>
+                <div className="flex flex-col gap-[1rem] items-center justify-center relative group transform transition duration-1000 ease-in-out">
+                  <div className="w-full">
                     <img
                       src={image}
                       alt={image}
-                      className=" border-gray-500"
+                      className="w-full"
                     />
                   </div>
 
@@ -69,7 +69,7 @@ import { useEffect } from "react";
                 </div>
 
                 {/* Tittle */}
-                <div className="flex flex-col items-start gap-1">
+                <div className="flex flex-col items-start gap-1 px-[1rem] py-[1rem]">
                   <div>
                     <h3 className="text-[20px] font-[700] text-[rgba(68, 68, 68, 0.22) ] text-transparent[50%] font-raleway ">
                       {name}
