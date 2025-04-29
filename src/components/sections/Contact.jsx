@@ -1,10 +1,9 @@
 import { CiLocationOn } from "react-icons/ci";
 import { FiMail } from "react-icons/fi";
 import { IoCallOutline } from "react-icons/io5";
-import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -22,27 +21,25 @@ const Contact = () => {
   useEffect(() => {
     Aos.init({});
   }, []);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-  
     emailjs
-      .sendForm('service_c1j14zg', 'template_fmxvkm5', form, {
-        publicKey: 'TJ8_EtOpVqLoUXtPc',
+      .sendForm("service_c1j14zg", "template_fmxvkm5", form, {
+        publicKey: "TJ8_EtOpVqLoUXtPc",
       })
       .then(
         () => {
-          console.log('SUCCESS!');
-          notify('success', 'Your message has been sent successfully! 🎉');
+          notify("success", "Your message has been sent successfully! 🎉");
           form.reset();
         },
         (error) => {
-          console.log('FAILED...', error);
-          notify('error', 'Failed to send message. Try again later.');
+          notify(error, "Failed to send message. Try again later.");
         }
       );
   };
-  
+
   return (
     <section>
       {/* child */}
@@ -53,10 +50,9 @@ const Contact = () => {
           data-aos="zoom-in-up"
           data-aos-duration="1000"
         >
-          <h2 className="font-raleway relative inline-block after:content-[''] after:inline-block after:w-[120px] after:h-px after:bg-[#ffc451] after:mx-[10px] after:my-[4px] text-[20px] font-[500] text-[#9f9fa6]  text-transparent[50%]">
+          <h2 className="font-raleway relative inline-block after:content-[''] after:inline-block after:w-[120px] after:h-px after:bg-[#ffc451] after:mx-[10px] after:my-[4px] text-[20px] font-[500] text-[#9f9fa6] text-transparent[50%]">
             CONTACT
           </h2>
-
           <p className="text-[36px] font-[700] font-roboto">CONTACT US</p>
         </div>
         {/* location  */}
@@ -75,7 +71,6 @@ const Contact = () => {
             className="w-full h-full"
           ></iframe>
         </div>
-
         {/* contact deails */}
         <div
           className="flex flex-col lg:flex-row items-start px-0 lg:px-[1rem] gap-[8rem]"
@@ -116,16 +111,12 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
           {/* Personal Information */}
-          <div
-            className="flex w-full px-[1rem] lg:px-[3rem] gap-[1rem] pb-6"
-   
-          >
+          <div className="flex w-full px-[1rem] lg:px-[3rem] gap-[1rem] pb-6">
             <form onSubmit={handleFormSubmit} className="w-full">
-              <div className=" flex-col flex md:flex-row items-center gap-[3rem] rounded-[4px] p-[1rem] w-full">
+              <div className="flex-col flex md:flex-row items-center gap-[3rem] rounded-[4px] p-[1rem] w-full">
                 <input
-                  className=" border-[1px] border-[#ccc] rounded-[4px] p-[1rem] mb-[1rem] w-full hover:border-yellow-400"
+                  className="border-[1px] border-[#ccc] rounded-[4px] p-[1rem] mb-[1rem] w-full hover:border-yellow-400"
                   type="text"
                   required
                   autoComplete="off"
@@ -133,7 +124,7 @@ const Contact = () => {
                   name="name"
                 />
                 <input
-                  className=" border-[1px] border-[#ccc] rounded-[4px] p-[1rem] mb-[1rem] w-full hover:border-yellow-400"
+                  className="border-[1px] border-[#ccc] rounded-[4px] p-[1rem] mb-[1rem] w-full hover:border-yellow-400"
                   type="email"
                   required
                   autoComplete="off"
@@ -143,7 +134,7 @@ const Contact = () => {
               </div>
               <div className="flex flex-col items-center justify-center gap-[2rem] rounded-[4px] p-[1rem]">
                 <input
-                  className=" border-[1px] border-[#ccc] rounded-[4px] p-[1rem] mb-[1rem] w-full hover:border-yellow-400"
+                  className="border-[1px] border-[#ccc] rounded-[4px] p-[1rem] mb-[1rem] w-full hover:border-yellow-400"
                   type="text"
                   required
                   autoComplete="off"
@@ -151,7 +142,7 @@ const Contact = () => {
                   name="subject"
                 />
                 <textarea
-                  className=" border-[1px] border-[#ccc] rounded-[4px] p-[1rem]  w-full hover:border-yellow-400"
+                  className="border-[1px] border-[#ccc] rounded-[4px] p-[1rem] w-full hover:border-yellow-400"
                   rows="10"
                   placeholder="Enter your message"
                   name="message"
@@ -159,14 +150,15 @@ const Contact = () => {
                   autoComplete="off"
                 ></textarea>
                 <div>
-                <button
-                  type="submit"
-                  value="send"
-                  className="font-roboto text-black border-2 border-yellow-400 rounded-[4px] px-[2rem] py-[7px] bg-yellow-400 cursor-pointer "
-                  onClick={notify} >
-                  Send Message
-                </button>
-                <ToastContainer />
+                  <button
+                    type="submit"
+                    value="send"
+                    className="font-roboto text-black border-2 border-yellow-400 rounded-[4px] px-[2rem] py-[7px] bg-yellow-400 cursor-pointer"
+                    onClick={notify}
+                  >
+                    Send Message
+                  </button>
+                  <ToastContainer />
                 </div>
               </div>
             </form>

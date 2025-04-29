@@ -1,22 +1,22 @@
 [
-    {
-        "image" :   "/assets/team-1.jpg" ,
-        "name" :    "Walter White" ,
-        "title" :   "Chief Executive Officer" 
-    },
-    {
-        "image" :   "/assets/team-2.jpg" ,
-        "name" :    "Sarah Jhonson" ,
-        "title" :   "Product Manager" 
-    },
-    {
-        "image" :   "/assets/team-3.jpg" ,
-        "name" :    "William Anderson" ,
-        "title" :   "CTO" 
-    },
-    {
-        "image" :   "/assets/team-4.jpg" ,
-        "name" :    "Amanda Jepson" ,
-        "title" :   "Accountant" 
-    }
+  {
+    "image": "/assets/team-1.jpg",
+    "name": "Walter White",
+    "title": "Chief Executive Officer"
+  },
+  {
+    "image": "/assets/team-2.jpg",
+    "name": "Sarah Jhonson",
+    "title": "Product Manager"
+  },
+  {
+    "image": "/assets/team-3.jpg",
+    "name": "William Anderson",
+    "title": "CTO"
+  },
+  {
+    "image": "/assets/team-4.jpg",
+    "name": "Amanda Jepson",
+    "title": "Accountant"
+  }
 ]

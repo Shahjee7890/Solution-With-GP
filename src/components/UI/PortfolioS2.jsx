@@ -13,6 +13,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 export const PortfolioS2 = () => {
+  
   useEffect(() => {
     Aos.init({});
   }, []);
@@ -27,7 +28,6 @@ export const PortfolioS2 = () => {
     if (isInView) {
       setCounterOn(true);
     }
-    console.log("Counter is in view:", true);
   }, [isInView]);
 
   return (
@@ -47,13 +47,12 @@ export const PortfolioS2 = () => {
         {/* content */}
         <div>
           {/* Heading and discrip */}
-
           <div
-            className="flex flex-col items-start justify-center gap-[1rem] "
+            className="flex flex-col items-start justify-center gap-[1rem]"
             data-aos="zoom-in-up"
             data-aos-duration="1000"
           >
-            <h3 className=" text-[25px] lg:text-[2rem] font-[700] font-raleway">
+            <h3 className="text-[25px] lg:text-[2rem] font-[700] font-raleway">
               Voluptatem dignissimos provident quasi
             </h3>
             <p className="text-[16px] font-[400] text-[#6c757d] font-roboto">
@@ -62,17 +61,14 @@ export const PortfolioS2 = () => {
               aute irure dolor in reprehenderit
             </p>
           </div>
-
           {/* Details */}
-
           <div
-            className="grid grid-cols-1 text-wrap lg:grid-cols-2 gap-1 lg:gap-[1rem] "
+            className="grid grid-cols-1 text-wrap lg:grid-cols-2 gap-1 lg:gap-[1rem]"
             ref={ref}
             data-aos="zoom-in-up"
             data-aos-duration="1000"
           >
             {/* detail 1 */}
-
             <div className={detailParent}>
               <div>
                 <BsEmojiSmile className="text-yellow-400 w-[3rem] h-[3rem]" />
@@ -92,7 +88,6 @@ export const PortfolioS2 = () => {
               </div>
             </div>
             {/* detail 2 */}
-
             <div>
               <div className={detailParent}>
                 <div>
@@ -115,7 +110,6 @@ export const PortfolioS2 = () => {
                 </div>
               </div>
             </div>
-
             {/* detail 3 */}
             <div className={detailParent}>
               <div>
@@ -127,7 +121,7 @@ export const PortfolioS2 = () => {
                     <CountUp start={0} end={1453} duration={2} delay={0} />
                   )}
                 </h1>
-                <div className=" flex items-center text-nowrap justify-center text-[15px] lg:text-[12px] xl:text-[15px] font-[400] text-[#6c757d] gap-[6px] font-raleway">
+                <div className="flex items-center text-nowrap justify-center text-[15px] lg:text-[12px] xl:text-[15px] font-[400] text-[#6c757d] gap-[6px] font-raleway">
                   <p className="text-[13px] lg:text-[10px] xl:text-[15px] font-[600] text-[#6c757d]">
                     Hours Of Support
                   </p>

@@ -4,14 +4,16 @@ import { NavLink, useLocation } from "react-router-dom";
 import Dropdown from "../shared/dropdown";
 
 export const Header = () => {
+
   const [showMen, setShowMen] = useState(false);
+
   const [openDropdown, setOpenDropDown] = useState(false);
+  
   const handleMen = () => {
     setShowMen(!showMen);
   };
   const location = useLocation();
   const pathname = location.pathname;
-  console.log(pathname);
 
   // open dropdown on hover
   const handleDropdown = () => {
@@ -21,7 +23,7 @@ export const Header = () => {
   const btnColor = `transition duration-300 ease-in-out`;
   const activeLink = `bg-yellow-400 w-full px-10 py-2 rounded-[4px] text-black`;
   return (
-    <header className="bg-[rgba(0,0,0,0.8)] shadow-md py-4 px-4 xl:px-8 fixed top-0 left-0 right-0  w-full z-[5]">
+    <header className="bg-[rgba(0,0,0,0.8)] shadow-md py-4 px-4 xl:px-8 fixed top-0 left-0 right-0 w-full z-[5]">
       <div>
         <div className="flex justify-between xl:gap-4">
           <div className="text-white text-[32px] font-bold py-1">
@@ -45,7 +47,7 @@ export const Header = () => {
             >
               <RxCross2 />
             </div>
-            <ul className=" gap-4 px-[1.5rem] pt-[3rem]  lg:px-0 lg:pt-0 flex flex-col lg:flex-row xl:gap-6 text-[16px] text-black lg:text-white items-start lg:items-center justify-center text-center font-poppins">
+            <ul className="gap-4 px-[1.5rem] pt-[3rem]  lg:px-0 lg:pt-0 flex flex-col lg:flex-row xl:gap-6 text-[16px] text-black lg:text-white items-start lg:items-center justify-center text-center font-poppins">
               <li
                 onClick={() => setShowMen(false)}
                 className={`${btnColor}  ${pathname === "/" && activeLink}`}
@@ -104,7 +106,7 @@ export const Header = () => {
           <div className="flex gap-[1rem] items-center">
             <div className="text-white border-2 border-yellow-400 rounded-[4px] px-[2.7rem] py-[7px] hover:bg-yellow-400 hover:text-black transition duration-300 ease-in-out cursor-pointer">
               <NavLink to={"/about"}>
-                <button className="cursor-pointer font-roboto ">
+                <button className="cursor-pointer font-roboto">
                   {/* text-[11px] */}
                   Get Start
                 </button>

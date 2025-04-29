@@ -6,13 +6,15 @@ import { SwiperCom } from "../UI/SwiperCom";
 import { AboutGuide } from "../UI/AboutGuide";
 
 const About = () => {
+
   useEffect(() => {
     Aos.init({});
   }, []);
+
   return (
     <section id="about">
       <div
-        className=" flex flex-col-reverse lg:flex-row gap-[2rem] w-full lg:justify-center justify-center py-[3rem] px-[1.7rem] lg:px-[3rem]"
+        className="flex flex-col-reverse lg:flex-row gap-[2rem] w-full lg:justify-center justify-center py-[3rem] px-[1.7rem] lg:px-[3rem]"
         data-aos="zoom-in-up"
         data-aos-duration="1000"
       >
@@ -54,9 +56,7 @@ const About = () => {
             proident
           </p>
         </div>
-
         {/*About image*/}
-
         <div className="w-full lg:w-[60%] ">
           <img src="../assets/about.jpg" alt="about-image" className="w-full" />
         </div>
@@ -65,9 +65,7 @@ const About = () => {
       <div>
         <SwiperCom />
       </div>
-
       {/* Guide */}
-
       <div className="mx-auto w-full">
         <AboutGuide />
       </div>

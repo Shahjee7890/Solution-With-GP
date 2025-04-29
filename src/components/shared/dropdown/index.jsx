@@ -1,18 +1,16 @@
 import React, { useCallback, useEffect, useRef } from "react";
 
-const Dropdown = ({ openDropdown, setOpenDropDown,handleDropdown }) => {
+const Dropdown = ({ openDropdown, setOpenDropDown, handleDropdown }) => {
   const dropdownRef = useRef(null);
 
-
-  const handleClickOutside = useCallback((event) => {
-    if (
-      dropdownRef.current &&
-      !(dropdownRef.current).contains(event.target)
-    ) {
-      setOpenDropDown(false);
-    }
-  }, [setOpenDropDown, dropdownRef]);
-
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpenDropDown(false);
+      }
+    },
+    [setOpenDropDown, dropdownRef]
+  );
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -20,7 +18,7 @@ const Dropdown = ({ openDropdown, setOpenDropDown,handleDropdown }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [handleClickOutside]);
-    
+
   return (
     <div class="relative inline-block text-left">
       <div>
@@ -52,7 +50,7 @@ const Dropdown = ({ openDropdown, setOpenDropDown,handleDropdown }) => {
 
       {openDropdown && (
         <div
-        ref={dropdownRef}
+          ref={dropdownRef}
           class="absolute left-0 z-10 mt-2 w-50 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden"
           role="menu"
           aria-orientation="vertical"
